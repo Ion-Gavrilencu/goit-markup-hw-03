@@ -8,6 +8,10 @@
     --second-family: "Raleway", sans-serif;
     --fond-family: "Roboto", sans-serif;
 }
+*,
+::before,
+::after {
+    box-sizing: border-box;}
 
 body {
     font-family: var(--fond-family);
@@ -22,6 +26,8 @@ ul {
     background-color: var(--white-color);
     display: flex;
     justify-content: space-around;
+    align-items: center;
+
 }
 
 .global-header .logo::before {
@@ -46,8 +52,9 @@ ul {
 .main-nav-ul {
     display: flex;
     width: 500px;
-    margin-block-start: 0;
-    justify-content: space-evenly;
+    padding-inline-start: 0;
+    justify-content: flex-start;
+    gap: 40px;
 }
 
 .global-header .main-nav a,
@@ -77,6 +84,7 @@ ul {
     color: var(--slate-color);
 }
 
+
 .global-header .main-nav a:hover,
 .global-header .social-div a:hover,
 .first-section .all-button:hover,
@@ -98,11 +106,14 @@ ul {
 .container-button{
     display: flex;
     justify-content: center;
+    padding-top: 96px;
+    padding-bottom: 72px;
 }
 .section-button{
     display: flex;
     justify-content: center;
     gap: 24px;
+    padding-inline-start:  0px;
 
 }
 .first-section .all-button {
@@ -117,7 +128,6 @@ ul {
     line-height: 1.5em;
     text-align: center;
     color:var(--iris-color);
-    text-transform: uppercase;
     padding: 12px 24px;
     cursor: pointer;
 }
@@ -125,14 +135,12 @@ ul {
     background-color:var(--cloud-color);
     border-color: 1px solid var(--cornflower-color);
     border-radius: 4px;
-    width: 116px;
     height: 48px;
     border-width: 1px;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5em;
     color: var(--iris-color);
-    text-transform: uppercase;
     padding: 12px  24px;
     cursor: pointer;
     text-align: center;
@@ -148,7 +156,6 @@ ul {
     font-size: 16px;
     line-height: 1.5em;
     color: var(--iris-color);
-    text-transform: uppercase;
     padding: 12px  24px;
     cursor: pointer;
     text-align: center;
@@ -164,7 +171,6 @@ ul {
     font-size: 16px;
     line-height: 1.5em;
     color: var(--iris-color);
-    text-transform: uppercase;
     padding: 12px  24px;
     cursor: pointer;
     text-align: center;
@@ -180,7 +186,6 @@ ul {
     font-size: 16px;
     line-height: 1.5em;
     color: var(--iris-color);
-    text-transform: uppercase;
     padding: 12px  24px;
     cursor: pointer;
     text-align: center;
@@ -191,7 +196,21 @@ ul {
     display: flex;
     justify-content: center;
     gap: 24px;
+    padding-inline-start: 0px;
 }
+.second-section,
+.third-section,
+.fourth-section{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 48px;
+}
+.second-container,
+.third-container,
+.fourth-container{
+    width: 1200px;
+}
+
 .second-section h3,
 .third-section h3,
 .fourth-section h3 {
@@ -210,16 +229,21 @@ ul {
     line-height: 1.5em;
     text-align: center;
 }
+
+
+.global-footer {
+    height: 312px;
+    background-color: var(--navy-blue-color);
+}
+
 .global-footer {
     height: 312px;
     background-color: var(--navy-blue-color);
 }
 
 .footer-container {
-    display: flex;
-    width: 264px;
-    height: 112px;
-    flex-wrap: wrap;
+    padding-top: 100px;
+    padding-left: 156px;
 }
 
 .global-footer .logo::before {

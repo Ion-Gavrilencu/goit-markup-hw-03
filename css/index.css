@@ -9,7 +9,11 @@
     --second-family:"Raleway",sans-serif;
     --fond-family:"Roboto", sans-serif;
 }
-
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
 body{font-family: var(--fond-family);
     color: var(--slate-color);
   }
@@ -19,6 +23,7 @@ ul {list-style-type: none;}
     background-color:var(--white-color);
     display: flex;
     justify-content: space-around;
+    align-items: center;
 }
 
 .global-header .logo::before{
@@ -41,8 +46,9 @@ ul {list-style-type: none;}
 .main-nav-ul{
     display: flex;
     width: 500px;
-    margin-block-start: 0;
-    justify-content: space-evenly;
+    padding-inline-start: 0;
+    justify-content:flex-start;
+    gap: 40px;
 }
 .global-header .main-nav a,
 .global-header .main-nav a:visited,
@@ -76,7 +82,6 @@ color: var(--navy-blue-color);
 }
 .first-section .hero-title{
     padding-top: 188px;
-    padding-bottom: 48px;
     display: flex;
     justify-content: center;
     font-weight: 700;
@@ -103,7 +108,6 @@ font-weight: 500;
 font-size: 16px;
 line-height: 1.5em;
 color:var(--white-color);
-text-transform: uppercase;
 padding: 16px 32px;
 cursor: pointer;
 }
@@ -119,6 +123,8 @@ cursor: pointer;
 }
 .second-section ul{
     display: flex;
+    gap: 24px;
+    padding-inline-start: 0px;
 }
 .second-section h3{
     font-weight: 500;
@@ -139,6 +145,8 @@ cursor: pointer;
     width: 1200px;
     display: flex;
     padding-inline-start: 0;
+    gap: 24px;
+    justify-content: center;
 }
 .third-section h2,
 .fourth-section h2
@@ -171,17 +179,17 @@ cursor: pointer;
 .fourth-section ul{
     display: flex;
     padding-inline-start: 0;
-    justify-content: space-evenly;
+    justify-content: center;
+    padding-top: 72px;
+    gap: 24px;
 }
 .global-footer{
     height: 312px;
     background-color:var(--navy-blue-color);
 }
 .footer-container{
-    display: flex;
-    width: 264px;
-    height: 112px;
-    flex-wrap: wrap;
+    padding-top: 100px;
+    padding-left: 156px;
 }
 .global-footer .logo::before {
     content: "WEB";
